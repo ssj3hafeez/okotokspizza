@@ -5,32 +5,35 @@
 
 @import '_color.scss';
 
-@media only screen 
-and 
-(min-width: 1025px){
+@media only screen and 
+(min-width: 320px) and 
+(max-width: 479px){};
 
-}
+@media only screen and
+ (min-width: 480px) and
+  (max-width: 767px){};
 
-@media only screen
- and 
-(min-width:380px)
- and 
- (max-width:480px){
+@media only screen and (min-width: 768px)
+ and (max-width: 991px) {};
 
-}
+@media only screen and (min-width: 992px)
+{};
+
+
 
 .page_container{
-    justify-items: center;
-    text-align: center;
-    background: $primary-color2;
-    
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(10vh, auto) minmax(80vh, auto)
+    minmax(10vh, auto);
 }
 
 .address{
     text-align: center;
     color: $primary-color5;
     justify-items: center;
-    font-weight: 16px;
+    font-weight: bolder;
+    padding: 5px;
 }
 .hours{
     text-align: center;
@@ -39,69 +42,112 @@ and
     font-weight: 16px;
 }
 
+#home_bio{
+    color:$primary-color5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+
+}
 
 .store_hours{
     text-align: center;
     color: $primary-color5;
     justify-items: center;
     font-weight: 16px;
+    padding-bottom: 10px;
 }
 
 .number{
-    grid-area: 1/4/2/5;
     color:$primary-color5;
     text-decoration: none;
     font-weight: bolder;
     font-stretch: ultra-expanded;
-    font-size: 20px;
-    padding-right: 5px;
+    font-size: 18px;
+    text-align: right;
+
     
     &:hover{
         color:$primary-color1;
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 
 
 }
 
-.header_menu{
-    grid-area: 2/1/3/5;
+.pizza_oven{
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 10px;
+
 }
 
 .body_container{
-    grid-area: 3/1/6/5;
+    justify-items: center;
+    text-align: center;
+    background: $primary-color2;
+    padding-bottom: 20px;
+    padding-top: 20px;
+ 
+   
+}
+
+.banner_photo{
+    width:75%;
+    padding: 10px;
 
 }
 
 .h1{
     text-align: center;
-    padding-bottom: 5px;
+    padding: 10px;
     color:$primary-color5;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.video_pizza{
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
 }
 
 .bio{
     color:$primary-color5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+    padding: 5px;
 }
 
 .header_container{
-    display: grid;
-    grid-area: 1/1/3/6;
     width: 100%;
-    height: 176px;
     grid-template-columns: 1fr;
-    background-color: $primary-color4;
-    margin-top: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    background-color:$primary-color4;
+    
 }
 
-#header_logo{
-    grid-area: 1/1/2/2;
-    max-width:75px;
+
+.top_header{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr;
+}
+
+.bottom_header{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    padding-bottom: -150px;
+ 
+
+}
+
+
+.header_logo{
+    max-width:80px;
     height: 60px;
     padding-top: 3px; 
-    padding-right: 5px;
+    padding-right: 50px;
 
     &:hover {
         transform: scale(1.5);
@@ -113,17 +159,12 @@ and
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.header_logo1{
-    padding: 10px;
-  }
 
 .header_item_container{
     display:inline;
     justify-items: center;
-    text-align: center;
-    margin: 10px;
-    margin-right: 20px;
-    padding-right: 15px;
+    text-align: center;;
+   
 }
 
 .header_link{
@@ -139,20 +180,20 @@ and
  
 }
 
+
+
 .promo_deal{
     width: 100%; 
     height: 100%;
 }
 
-.promo_image{
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 90%;
-   height: auto;
-
+.banner_photo{
+    cursor: crosshair;
 }
 
+.banner_photo:hover{
+   transform: scale(1.2);
+}
 
 .owner_img{
     width: 100%;
@@ -164,7 +205,7 @@ and
     width: 100%;
     max-width: 375px;
     height: auto;
-    padding: 3px;
+    padding: 5px;
 }
 
 .store_img{
@@ -174,14 +215,6 @@ and
     justify-items: center;
     text-align: center;
     padding: 10px;
-}
-.video{
-    max-width: 380px;
-    width: 100%;
-    height: auto;
-    justify-items: center;
-    text-align: center;
-    margin: 15px;
 }
 
 .promo_image{
@@ -197,12 +230,9 @@ and
     width:auto;}
     
     .footer_container{
-        display: grid;
-        grid-area: 6/1/7/5;
+      
         width: 100%;
-        height: auto;
         background: $primary-color4;
-        padding: 10px;
         font-size: 16px;
         color: $primary-color5;
     
