@@ -3,6 +3,18 @@
   margin: 0;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  a[href*="tel:"] {
+    pointer-events: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  a[href*="tel:"] {
+    pointer-events: none;
+  }
+}
+
 .page_container {
   display: -ms-grid;
   display: grid;
@@ -10,6 +22,12 @@
       grid-template-columns: 1fr;
   -ms-grid-rows: minmax(10vh, auto) minmax(80vh, auto) minmax(10vh, auto);
       grid-template-rows: minmax(10vh, auto) minmax(80vh, auto) minmax(10vh, auto);
+}
+
+.fancy_pizza {
+  width: 100%;
+  max-width: 375px;
+  height: 50%;
 }
 
 .address {
@@ -58,9 +76,8 @@
 
 .pizza_oven {
   width: 100%;
-  max-width: 400px;
+  max-width: 375px;
   height: auto;
-  padding: 10px;
 }
 
 .body_container {
@@ -68,7 +85,7 @@
   text-align: center;
   background: #E7ECEF;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .banner_photo {
@@ -83,10 +100,19 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.video_wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
 .video_pizza {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 500px;
-  height: 400px;
+  height: 100%;
 }
 
 .bio {
@@ -121,7 +147,7 @@
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  padding-bottom: -150px;
+  padding-bottom: 5px;
 }
 
 .header_logo {
@@ -148,13 +174,15 @@
 }
 
 .header_link {
-  color: #274C77;
   text-decoration: none;
-  font-size: 18px;
+}
+
+.header_link:link {
+  color: #274C77;
 }
 
 .header_link:hover {
-  color: #A3CEF1;
+  color: #E7ECEF;
 }
 
 .header_link:visited {
@@ -203,10 +231,10 @@
 
 .google_maps {
   position: relative;
-  text-align: center;
   justify-items: center;
   height: auto;
   width: auto;
+  min-width: width 400px;
 }
 
 .footer_container {
@@ -214,5 +242,25 @@
   background: #E7C69F;
   font-size: 16px;
   color: #274C77;
+  text-align: center;
+  padding: 3px;
+}
+
+.ig {
+  max-width: 20px;
+  max-height: 20px;
+  pad: 5px;
+}
+
+.twitter {
+  max-width: 20px;
+  max-height: 20px;
+  pad: 5px;
+}
+
+.fb {
+  max-width: 20px;
+  max-height: 20px;
+  pad: 5px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -20,11 +20,16 @@
 
 @media only screen and (min-width: 768px)
  and (max-width: 991px) {
+    a[href*="tel:"] {
+        pointer-events: none;
+    }
 
  }
 
-@media only screen and (min-width: 992px)
-{
+@media only screen and (min-width: 992px){
+    a[href*="tel:"] {
+        pointer-events: none;
+    }
 
 }
 
@@ -119,13 +124,32 @@ grid-template-rows: minmax(10vh, auto)
 
     .header_link{
         text-decoration: none;
+        &:link{
+            color:$primary-color5;
+        }
+        &:hover{
+            color:$primary-color2;
+        }
+        &:visited{
+            color:$primary-color1;
+        }
+    }
+
+
+    .header_link_food{
+        text-decoration: none;
+        
+        &:link{
+            color:$primary-color2;
+        }
          &:hover{
-             color:$primary-color3;
+             color:$primary-color4;
          }
          &:visited{
-             color:$primary-color5;
+             color:$primary-color3;
          }
     }
+
 
 
 
@@ -159,12 +183,6 @@ grid-template-rows: minmax(10vh, auto)
         padding-right: 15px;
         color: $primary-color2;
         text-decoration: none;
-        &:hover{
-            color:$primary-color3;
-        }
-        &:visited{
-            color:$primary-color2;
-        }
      
     }
 
@@ -172,6 +190,8 @@ grid-template-rows: minmax(10vh, auto)
     .footer_container{
         background: $primary-color4;
         color:$primary-color5;
+        text-align: center;
+        padding: 2px;
     }
     
 
@@ -359,4 +379,28 @@ grid-template-rows: minmax(10vh, auto)
         height: auto;
      }
 
+
+     .ig{
+        max-width: 20px;
+        max-height: 20px;
+        pad: 5px;
+        
+        
+    }
+
+    .twitter{
+        max-width: 20px;
+        max-height: 20px;
+        pad: 5px;
+
+
+    }
+
+    .fb{
+        max-width: 20px;
+        max-height: 20px;
+        pad: 5px;
+     
+
+    }
 

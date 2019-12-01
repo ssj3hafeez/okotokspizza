@@ -7,17 +7,26 @@
 
 @media only screen and 
 (min-width: 320px) and 
-(max-width: 479px){};
+(max-width: 479px){
+   
+}
 
 @media only screen and
  (min-width: 480px) and
   (max-width: 767px){};
 
 @media only screen and (min-width: 768px)
- and (max-width: 991px) {};
+ and (max-width: 991px) {
+    a[href*="tel:"] {
+        pointer-events: none;
+    }
+ };
 
-@media only screen and (min-width: 992px)
-{};
+@media only screen and (min-width: 992px){
+    a[href*="tel:"] {
+        pointer-events: none;
+    }
+};
 
 
 
@@ -28,6 +37,11 @@
     minmax(10vh, auto);
 }
 
+.fancy_pizza{
+    width: 100%;
+    max-width: 375px;
+    height: 50%;
+}
 .address{
     text-align: center;
     color: $primary-color5;
@@ -76,9 +90,8 @@
 
 .pizza_oven{
   width: 100%;
-  max-width: 400px;
+  max-width: 375px;
   height: auto;
-  padding: 10px;
 
 }
 
@@ -87,7 +100,7 @@
     text-align: center;
     background: $primary-color2;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
  
    
 }
@@ -105,11 +118,21 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.video_wrap{
+    position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+    }
 .video_pizza{
-  width: 100%;
-  max-width: 500px;
-  height: 400px;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
+
+
 
 .bio{
     color:$primary-color5;
@@ -137,7 +160,7 @@
     display:grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr;
-    padding-bottom: -150px;
+    padding-bottom: 5px;
  
 
 }
@@ -168,16 +191,16 @@
 }
 
 .header_link{
-    color:$primary-color5;
     text-decoration: none;
-    font-size: 18px;
+    &:link{
+        color:$primary-color5;
+    }
     &:hover{
-        color:$primary-color3;
+        color:$primary-color2;
     }
     &:visited{
         color:$primary-color1;
     }
- 
 }
 
 
@@ -224,10 +247,12 @@
 
 .google_maps{
     position:relative;
-    text-align:center;
     justify-items: center;
     height:auto;
-    width:auto;}
+    width:auto;
+    min-width: width 400px;
+    
+}
     
     .footer_container{
       
@@ -235,7 +260,33 @@
         background: $primary-color4;
         font-size: 16px;
         color: $primary-color5;
+        text-align: center;
+        padding: 3px;
     
+    }
+
+    .ig{
+        max-width: 20px;
+        max-height: 20px;
+        pad: 5px;
+  
+        
+    }
+
+    .twitter{
+        max-width: 20px;
+        max-height: 20px;
+        pad: 5px;
+     
+
+    }
+
+    .fb{
+        max-width: 20px;
+        max-height: 20px;
+        pad: 5px;
+     
+
     }
 
         
